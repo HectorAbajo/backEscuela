@@ -1,0 +1,28 @@
+# Archivos de Dependencias
+node_modules/
+
+# Archivos de Entorno y Configuraciones Secretas
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs y Archivos de Debug de Node/npm
+npm-debug.log*
+yarn-error.log
+logs/
+*.log
+
+# Archivos de Build y Compilación (si usas Webpack, Babel, TypeScript, etc.)
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Archivos Temporales y de Sistema Operativo
+.DS_Store
+Thumbs.db
+*.swp
+
+# Configuraciones de Entornos de Desarrollo (VS Code)
+.vscode/

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario Semanal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e1e6;
+            color: #3e3e3e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fcebeb;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #3e3e3e;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 2px solid #a37f8f;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f7e1e6;
+            color: #3e3e3e;
+        }
+        select {
+            width: 100%;
+            padding: 5px;
+            margin: 2px 0;
+            border: 1px solid #a37f8f;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 14px;
+        }
+        .select-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+        .select-container select {
+            flex-grow: 1;
+        }
+        .add-btn {
+            background-color: #a37f8f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .add-btn:hover {
+            background-color: #8b6d7a;
+        }
+        .hidden-form {
+            background-color: #f0d5da;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: none; /* Inicialmente oculto */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>HORARIO SEMANAL  1ro "A" (AULA)</h1>
+        
+        <div id="addMateriaForm" class="hidden-form">
+            <h3>Crear Nueva Materia</h3>
+            <label for="newMateriaName">Nombre de la Materia:</label>
+            <input type="text" id="newMateriaName">
+            <button>Guardar</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1er</td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2da</td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_miercoles_9">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_miercoles_9">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_miercoles_9">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <tr>
+                    <td>3ra</td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_miercoles_9">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_miercoles_9">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_miercoles_9">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4ta</td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_miercoles_9">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_miercoles_9">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_miercoles_9">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5ta</td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_miercoles_9">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_miercoles_9">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_miercoles_9">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6ta</td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_miercoles_9">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_miercoles_9">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_miercoles_9">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7ma</td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_miercoles_9">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_miercoles_9">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_miercoles_9">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="select-container">
+                            <select name="materia_lunes_6">
+                                <option value="">Selecciona Materia</option>
+                                <option value="matematica">Matemática</option>
+                                <option value="historia">Historia</option>
+                                <option value="fisica">Física</option>
+                            </select>
+                            <button class="add-btn" onclick="document.getElementById('addMateriaForm').style.display = 'block';">+</button>
+                        </div>
+                        <select name="profesor_titular_lunes_6">
+                            <option value="">Profesor Titular</option>
+                            <option value="perez">Prof. Pérez</option>
+                            <option value="gomez">Prof. Gómez</option>
+                        </select>
+                        <select name="profesor_suplente_lunes_6">
+                            <option value="">Profesor Suplente</option>
+                            <option value="rodriguez">Prof. Rodríguez</option>
+                            <option value="sanchez">Prof. Sánchez</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
