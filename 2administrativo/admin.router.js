@@ -12,7 +12,7 @@ const {
 
 const adminRouter = express.Router()
 
-adminRouter.post('/test', testController)
+
 
 /* Miembros */
 adminRouter.get('/members', getAllMembersController) 
@@ -33,7 +33,7 @@ adminRouter.get('/professors/:id/students', getAllStudentsByProfessorController)
 adminRouter.get('/professors/:id/courses/:courseId/students', getAllStudentsByCourseByProfessorController)
 
 /* Profesores a Alumnos */
-adminRouter.post('/students/:id/grades', assignGradeByStudentsController)
+// adminRouter.post('/students/:id/grades', assignGradeByStudentsController)
 
 /* Cursos */
 adminRouter.get('/courses', getAllCourseController)

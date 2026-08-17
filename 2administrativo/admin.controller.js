@@ -333,4 +333,4 @@ const createClassController = async (req, res) =>{
 }
 
 
-module.exports = {getAllMembersController, getMemberByIdController, getMemberByEmailController, updateMemberDataController, addMemberDataController, deleteMemberController, }
+module.exports = {getAllMembersController, getMemberByIdController, getMemberByEmailController, updateMemberDataController, addMemberDataController, deleteMemberController, updateHoursFromSubjectController, getAllSubjectsByProfessorController, getSubjectByCourseByProfessorController, getCurrentHoursByProfessorController, getAllStudentsByProfessorController, getAllStudentsByCourseByProfessorController, getAllCourseController, getCourseByIdController, updatedCourseController, createCourseController, deleteCourseController, getAllSubjectsController, createSubjectController, updateSubjectController, deleteSubjectController, getAllClassesController, createClassController}

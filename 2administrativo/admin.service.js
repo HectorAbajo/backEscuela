@@ -303,7 +303,6 @@ const deleteCourseService = async (data)=>{
     }
 }
 
-/* CLASES */
 
 
 
